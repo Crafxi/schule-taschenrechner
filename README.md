@@ -22,7 +22,7 @@ Das hier ist eine Aufgabe, die ich von der Schule bekommen habe. Ich soll ein Ta
 
 ## Installation
 
-Um das Programm auszuführen braucht ihr Python (12.X).
+Um das Programm auszuführen braucht ihr Python (3.12.X).
 
 Außerdem braucht ihr dieses Python Package:
     
