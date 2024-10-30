@@ -10,7 +10,11 @@
 
 4. [Funktionen](#funktionen)
 
-5. [Lizenz](#lizenz)
+5. [UI-Elemente](#ui-elemente)
+
+6. [Aufgabenstellung](#aufgabenstellung)
+
+7. [Lizenz](#lizenz)
 
 ## Einleitung
 
@@ -78,6 +82,20 @@ Die `calc.py` Datei enthält alle Funktionen, die das Rechnen betreffen.
 calculate(equation)
 ```
 Berechnet die Aufgabe und gibt das Ergebnis zurück.
+
+## UI-Elemente
+
+### Entry Feld
+
+Das Entry Feld ist das Feld, in dem die Zahlen eingegeben werden und das Ergebnis angezeigt wird.
+
+### Buttons
+
+Die Buttons sind die Knöpfe mit den Zahlen und den Rechenzeichen.
+
+## Aufgabenstellung
+
+![Bildbeschreibung](Aufgabe.png)
 
 
 ## Lizenz
