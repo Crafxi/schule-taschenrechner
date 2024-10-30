@@ -1,4 +1,4 @@
-# DOKUMENTATION
+# Dokumentation
 
 ## Inhalt
 
