@@ -1,1 +1,89 @@
-# schule-taschenrechner
+# DOKUMENTATION
+
+## Inhalt
+
+1. [Einleitung](#einleitung)
+
+2. [Installation](#installation)
+
+3. [Verwendung](#verwendung)
+
+4. [Funktionen](#funktionen)
+
+5. [Lizenz](#lizenz)
+
+## Einleitung
+
+Das hier ist eine Aufgabe, die ich von der Schule bekommen habe. Ich soll ein Taschenrechner machen, der die vier Grundrechenarten kann und man 2 Zahlen eingeben kann. Ich hab das ganze nen wenig komplexer gemacht und hab noch ein paar Funktionen hinzugefügt.
+
+## Installation
+
+Um das Programm auszuführen braucht ihr Python (12.X).
+
+Außerdem braucht ihr dieses Python Package:
+    
+```bash
+pip install customtkinter
+```
+
+## Verwendung
+
+Um das Programm zu starten, führt die `main.py` Datei aus.
+
+## Funktionen
+
+### main.py
+
+Die `main.py` Datei enthält die `main()` Funktion, die das Programm startet.
+
+```python
+main()
+```
+Startet das Programm.
+
+### ui.py
+
+Die `ui.py` Datei enthält alle Funktionen, die das User Interface betreffen.
+
+```python
+clear_site()
+```
+Leert die Seite.
+
+```python
+create_widgets()
+```
+Erstellt die Widgets. Wie z.B. die Buttons und das Entry Felder.
+
+```python
+button_click(value)
+```
+Wird ausgeführt, wenn ein Button geklickt wird und fügt den Wert des Buttons in das Entry Feld ein.
+
+```python
+clear()
+```
+Löscht den Inhalt des Entry Feldes.
+
+```python
+calculate()
+```
+Versucht das eingebebene zu berechnen und gibt das Ergebnis aus. Es nutzt die calc.py Datei.
+
+### calc.py
+
+Die `calc.py` Datei enthält alle Funktionen, die das Rechnen betreffen.
+
+```python
+calculate(equation)
+```
+Berechnet die Aufgabe und gibt das Ergebnis zurück.
+
+
+## Lizenz
+
+Das Projekt nutzt die [MIT](https://choosealicense.com/licenses/mit/)-Lizenz.
+
+
+
+
