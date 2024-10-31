@@ -72,10 +72,16 @@ class App(customtkinter.CTk):
         # Eingabefeld erstellen und platzieren
         self.__entry = customtkinter.CTkEntry(self, width=220)
         self.__entry.place(x=10, y=10)
-        
-    
+
+        # Die Enter-Taste führt die Berechnung aus
+        self.bind("<Return>", lambda e: self.calculate())
+
     def button_click(self, value):
         # Wert in das Eingabefeld einfügen
+        entry = self.__entry.get()
+        if entry == "Error":
+            self.clear()
+
         self.__entry.insert("end", value)
         
     def clear(self):
@@ -85,7 +91,15 @@ class App(customtkinter.CTk):
     def calculate(self):
         try:
             # Berechnung durchführen und Ergebnis anzeigen
-            result = calc.calculate(self.__entry.get())
+            entry = self.__entry.get()
+            result = None
+            if entry == "":
+                result = ""
+            else:
+                result = calc.calculate(entry)
+                if result is None or result == float("inf") or result == float("-inf"):
+                    raise Exception()
+
             self.clear()
             self.__entry.insert("end", str(result))
         except:
