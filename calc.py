@@ -1,2 +1,2 @@
 def calculate(equation):
-    return eval(equation) # Gib das Ergebnis der Berechnung zurück.
+    return eval(equation) # Gibt das Ergebnis der Berechnung zurück.

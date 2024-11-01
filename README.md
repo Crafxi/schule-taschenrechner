@@ -75,6 +75,11 @@ calculate()
 ```
 Versucht das eingebebene zu berechnen und gibt das Ergebnis aus. Es nutzt die calc.py Datei.
 
+```python
+check_input()
+```
+Überprüft, ob die Eingabe korrekt ist.
+
 ### calc.py
 
 Die `calc.py` Datei enthält alle Funktionen, die das Rechnen betreffen.

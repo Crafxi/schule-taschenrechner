@@ -1,7 +1,7 @@
 import customtkinter
 from tkextrafont import Font
 import calc
-
+import string
 
 class App(customtkinter.CTk):
     def __init__(self):
@@ -77,16 +77,30 @@ class App(customtkinter.CTk):
         # Eingabefeld erstellen und platzieren
         self.__entry = customtkinter.CTkEntry(self, width=220, height=20, font=("Inter Black", 20))
         self.__entry.place(x=10, y=10)
-
+        
+        self.__entry.bind("<Map>", lambda e: self.__entry.focus())  # Eingabefeld fokussieren
+        self.__entry.bind("<Key>", lambda e: "break" if not self.check_input(e) else None)  # Eingabe überprüfen
+        
         # Die Enter-Taste führt die Berechnung aus
         self.bind("<Return>", lambda e: self.calculate())
+        
+    def check_input(self, event):
+        # Falls wir ein Error verursacht haben, wird das Eingabefeld geleert
+        entry = self.__entry.get()
+        if entry == "Error":
+            self.clear()
+            
+        # Überprüfen, ob der Wert ein gültiger Wert ist
+        if event.keysym in ("BackSpace", "space", "Return"):
+            return True
+        return event.char in string.digits or event.char in "+-*/.()%"
 
     def button_click(self, value):
         # Wert in das Eingabefeld einfügen
         entry = self.__entry.get()
         if entry == "Error":
             self.clear()
-
+            
         self.__entry.insert("end", value)
         
     def clear(self):
@@ -111,5 +125,4 @@ class App(customtkinter.CTk):
             # Fehlerbehandlung
             self.clear()
             self.__entry.insert("end", "Error")
-        
             
