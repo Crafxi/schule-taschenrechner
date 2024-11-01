@@ -28,6 +28,7 @@ Außerdem braucht ihr dieses Python Package:
     
 ```bash
 pip install customtkinter
+pip install tkextrafont
 ```
 
 ## Verwendung
@@ -95,7 +96,7 @@ Die Buttons sind die Knöpfe mit den Zahlen und den Rechenzeichen.
 
 ## Aufgabenstellung
 
-![Bildbeschreibung](Aufgabe.png)
+![Bildbeschreibung](resources/Aufgabe.png)
 
 
 ## Lizenz
