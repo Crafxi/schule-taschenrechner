@@ -90,8 +90,11 @@ class App(customtkinter.CTk):
         if entry == "Error":
             self.clear()
             
+        # Überprüfen, ob es ein Hotkey ist
+        if event.state == 4:
+            return event.char
         # Überprüfen, ob der Wert ein gültiger Wert ist
-        if event.keysym in ("BackSpace", "space", "Return"):
+        if event.keysym in ("BackSpace", "space", "Return", "Control_L"):
             return True
         return event.char in string.digits or event.char in "+-*/.()%"
 
